@@ -15,6 +15,9 @@ func main() {
 	// Grab the argument from the command line.
 	arg := os.Args[1]
 
-	// Print the required output: word and the number of characters.
-	fmt.Printf("%s: number of chars in the string %d\n", arg, len(arg))
+	// Convert the string into a slice of runes
+	runes := []rune(arg)
+
+	// Print the required output: word and the number of characters (as runes).
+	fmt.Printf("Word: %s\nChars: %d\n", arg, len(runes))
 }
